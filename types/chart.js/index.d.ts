@@ -31,8 +31,8 @@ declare class Chart {
     config: Chart.ChartConfiguration;
     data: Chart.ChartData;
     destroy: () => {};
-    update: ({duration, lazy, easing}?: Chart.ChartUpdateProps) => {};
-    render: ({duration, lazy, easing}?: Chart.ChartRenderProps) => {};
+    update: ({ duration, lazy, easing }?: Chart.ChartUpdateProps) => {};
+    render: ({ duration, lazy, easing }?: Chart.ChartRenderProps) => {};
     stop: () => {};
     resize: () => {};
     clear: () => {};
@@ -558,7 +558,7 @@ declare namespace Chart {
         fontFamily?: string;
         fontSize?: number;
         fontStyle?: string;
-        lineHeight?: number|string;
+        lineHeight?: number | string;
     }
 
     interface LinearTickOptions extends TickOptions {
@@ -639,7 +639,7 @@ declare namespace Chart {
     interface CommonAxe {
         bounds?: string;
         type?: ScaleType | string;
-        display?: boolean;
+        display?: boolean | 'auto';
         id?: string;
         stacked?: boolean;
         position?: string;
